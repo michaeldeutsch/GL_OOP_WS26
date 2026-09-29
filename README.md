@@ -1,71 +1,55 @@
-# Grundlagen Programmieren (SS 2026/27)
+# Grundlagen Programmieren (WS 2026/27)
 
-Diese Lehrveranstaltung vermittelt die Grundlagen der Programmierung und wird
-auf Deutsch abgehalten. Das Repository dokumentiert die Inhalte und den
-Lernfortschritt der einzelnen Einheiten. Jede Einheit wird einem eigenen Java-
-Package zugeordnet, zum Beispiel `einheit_01`.
+Die Lehrveranstaltung wird auf Deutsch abgehalten. Nach jeder LV werden zehn
+Übungen mit ansteigendem Schwierigkeitsgrad im passenden Ordner
+`uebung/uebungN/` abgelegt. Die zugehörigen Lösungen werden unter
+`src/main/java/einheit_N/uebungN/` gespeichert. Aufgaben und Lösungen werden
+nach jeder LV an die tatsächlich behandelten Inhalte angepasst. Das Repository
+ist Work in Progress; diese Aktualisierung erfolgt derzeit nicht automatisch.
 
-## LV-Termine und Einheiten
+## LV-Termine
 
-| Einheit | Datum | Beginn | Ende | Raum | Lektor/in | Status |
-|:--------|:------|:-------|:-----|:-----|:----------|:-------|
-| 01 | 28.09.2026 | 08:50 | 12:05 | L-218 | Deutsch | Abgehalten |
-| 02 | 05.10.2026 | 13:00 | 16:15 | L-323 | Deutsch | Coming soon |
-| 03 | 19.10.2026 | 13:00 | 16:15 | L-316 | Deutsch | Coming soon |
-| 04 | 02.11.2026 | 13:00 | 16:15 | L-223 | Deutsch | Coming soon |
-| 05 | 16.11.2026 | 13:00 | 16:15 | L-218 | Deutsch | Coming soon |
-| 06 | 30.11.2026 | 13:00 | 16:15 | L-316 | Deutsch | Coming soon |
-| 07 | 14.12.2026 | 13:00 | 15:25 | L-119 | Deutsch | Coming soon |
-| 08 | 11.01.2027 | Nicht angegeben | Nicht angegeben | Nicht angegeben | Deutsch | Coming soon |
+| Datum | Status | Wichtig |
+|:------|:-------|:--------|
+| 28.09.2026 | Abgeschlossen | Einführung |
+| 05.10.2026 | Offen | |
+| 19.10.2026 | Offen | |
+| 02.11.2026 | Offen | **Zwischentest 1** |
+| 16.11.2026 | Offen | |
+| 30.11.2026 | Offen | |
+| 14.12.2026 | Offen | **Zwischentest 2** |
+| 11.01.2027 | Offen | |
+| 18.01.2027 | Offen | **Haupttermin – keine Lehrveranstaltung** |
 
-Die Themen und Lernziele der kommenden Einheiten werden nach den jeweiligen
-Lehrveranstaltungen ergänzt.
+Der Status wird nach jedem Termin aktualisiert. Besondere Termine sind in der
+Spalte „Wichtig“ gekennzeichnet.
 
-## Einheit 01 – 28.09.2026
+## Bisherige Inhalte
 
-**Package:** `einheit_01`
-**Status:** Abgehalten
+### Einheit 01 – 28.09.2026
 
-| Thema | Kurze Erklärung | Nach der Einheit soll verstanden sein |
-|:------|:----------------|:-------------------------------------|
-| Organisation und Ablauf der Lehrveranstaltung | Die Organisation und der Ablauf der LV wurden besprochen. | Die Studierenden kennen den grundsätzlichen Ablauf und die Organisation der Lehrveranstaltung. |
-| KI-Coding | Der Einsatz von KI beim Programmieren und ihre Rolle im Lernprozess wurden thematisiert. | Die Studierenden wissen, dass KI unterstützen kann, ihre Vorschläge aber überprüft und verstanden werden müssen. |
-| UML-Klassendiagramme | Klassendiagramme wurden gemeinsam auf einem Flipchart gezeichnet. | Die Studierenden können Klassen, Attribute, Methoden und einfache Beziehungen in einem Klassendiagramm erkennen. |
-| Klassen und Objekte in Java | Das Beispiel `Student` verbindet das Klassendiagramm mit Java-Code und zeigt Attribute, Konstruktor und Methoden. | Die Studierenden verstehen, dass eine Klasse Aufbau und Verhalten von Objekten beschreibt und wie diese im Java-Code dargestellt werden. |
-| Software für Klassendiagramme | Die praktische Verwendung einer Software zum Erstellen von Klassendiagrammen wurde noch nicht behandelt. Die Diagramme wurden auf dem Flipchart gezeichnet. | Die Studierenden lernen in einer folgenden Einheit eine Software zur Erstellung von Klassendiagrammen kennen. |
+**Package:** `einheit_01` · **Status:** Abgeschlossen
 
-### Beispiele in `einheit_01`
+| Thema | Behandelt | Stand und nächste Schritte |
+|:------|:----------|:---------------------------|
+| Organisation der Lehrveranstaltung | Organisation und Ablauf der LV wurden besprochen. | Einführung abgeschlossen; der Ablauf gilt für das weitere Semester. |
+| KI-Coding | Einsatz und Rolle von KI beim Programmieren wurden thematisiert. | Erste Einordnung abgeschlossen; KI-Vorschläge bei praktischen Aufgaben kritisch prüfen und nachvollziehen. |
+| UML-Klassendiagramme | Klassendiagramme wurden gemeinsam auf einem Flipchart bis zum aktuellen Lernstand gezeichnet. | Erste manuelle Modellierung abgeschlossen; UML wird weiter verwendet. Eine Software für Klassendiagramme steht noch aus. |
+| Klassen und Objekte | Am Beispiel `Student` erfolgte ein Einstieg in Klassen, Objekte, Attribute, Konstruktoren und Methoden. | Einstieg behandelt; Java-Grundlagen werden in den nächsten Einheiten wiederholt, vertieft und laufend angewendet. |
+| Entwicklungswerkzeuge | Die praktische Verwendung der Entwicklungs- und UML-Werkzeuge wurde noch nicht behandelt. | Noch offen; Tool-Einsatz folgt in einer späteren Einheit. |
 
-#### Beispiel: Student und Semesterwechsel
+**Beispiel `Student`:** Ein Student wird durch Vorname, Nachname, Geschlecht,
+Semester und Matrikelnummer beschrieben. Der Konstruktor initialisiert das
+Objekt, Getter stellen ausgewählte Werte bereit und `toString()` gibt den
+Objektzustand aus. Die Methode `advanceSemester()` erhöht das Semester bis
+maximal sechs; danach meldet sie, dass kein weiterer Wechsel möglich ist.
+`Main` erstellt ein Studentenobjekt, gibt dessen Zustand aus und führt die
+Semesterwechsel vor.
 
-**Aufgabenstellung:** Ein Student soll mit Vorname, Nachname, Geschlecht,
-aktuellem Semester und Matrikelnummer modelliert werden. Das Programm soll
-Studierenden anlegen und den Semesterwechsel darstellen. Nach dem sechsten
-Semester darf kein weiteres Semester begonnen werden.
+**Minimale Abfolge:** Anforderungen und Studentendaten festlegen → Klasse,
+Attribute und Methoden im UML-Diagramm skizzieren → Klasse und Konstruktor
+implementieren → Objekt in `Main` erzeugen und ausgeben → Semesterwechsel
+ausführen und die Grenze beim sechsten Semester prüfen.
 
-**Umsetzung:** `Student.java` speichert die Daten als Attribute, setzt sie im
-Konstruktor und stellt sie mit `toString()` dar. Die Methode
-`advanceSemester()` erhöht das Semester bis maximal sechs und meldet mit ihrem
-Rückgabewert, ob der Wechsel möglich war. `Main.java` erzeugt ein Beispielobjekt,
-gibt es aus und ruft den Semesterwechsel wiederholt auf.
-
-**Ablauf:**
-
-1. Anforderungen und Daten des Studenten festlegen.
-2. Klasse, Attribute und Methoden als UML-Klassendiagramm skizzieren.
-3. Klasse `Student` mit Konstruktor und Semesterlogik implementieren.
-4. In `Main` ein Objekt erzeugen und ausgeben.
-5. Semesterwechsel einschließlich der Grenze beim sechsten Semester ausprobieren.
-
-## Weitere Einheiten
-
-Die Inhalte werden nach jeder Lehrveranstaltung ergänzt und dem passenden
-Package zugeordnet:
-
-- `einheit_02` – 05.10.2026: Coming soon
-- `einheit_03` – 19.10.2026: Coming soon
-- `einheit_04` – 02.11.2026: Coming soon
-- `einheit_05` – 16.11.2026: Coming soon
-- `einheit_06` – 30.11.2026: Coming soon
-- `einheit_07` – 14.12.2026: Coming soon
-- `einheit_08` – 11.01.2027: Coming soon
+Die Themen dieser Einführung sind ein Ausgangspunkt und werden im weiteren
+Semester wiederholt und in neuen Aufgaben angewendet.
