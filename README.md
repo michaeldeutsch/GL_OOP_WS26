@@ -1,149 +1,71 @@
-# Software Projects – Course Repository (SS26)
+# Grundlagen Programmieren (SS 2026/27)
 
-## Introduction
+Diese Lehrveranstaltung vermittelt die Grundlagen der Programmierung und wird
+auf Deutsch abgehalten. Das Repository dokumentiert die Inhalte und den
+Lernfortschritt der einzelnen Einheiten. Jede Einheit wird einem eigenen Java-
+Package zugeordnet, zum Beispiel `einheit_01`.
 
-This repository contains the **examples and materials for the course _Software Projects_** in the summer semester 2026.  
-It documents the **lecture progress** and provides students with the **code developed during the sessions**.
+## LV-Termine und Einheiten
 
-The repository evolves throughout the semester, reflecting the **chronological development of topics, tools, and programming concepts** introduced in the course.
+| Einheit | Datum | Beginn | Ende | Raum | Lektor/in | Status |
+|:--------|:------|:-------|:-----|:-----|:----------|:-------|
+| 01 | 28.09.2026 | 08:50 | 12:05 | L-218 | Deutsch | Abgehalten |
+| 02 | 05.10.2026 | 13:00 | 16:15 | L-323 | Deutsch | Coming soon |
+| 03 | 19.10.2026 | 13:00 | 16:15 | L-316 | Deutsch | Coming soon |
+| 04 | 02.11.2026 | 13:00 | 16:15 | L-223 | Deutsch | Coming soon |
+| 05 | 16.11.2026 | 13:00 | 16:15 | L-218 | Deutsch | Coming soon |
+| 06 | 30.11.2026 | 13:00 | 16:15 | L-316 | Deutsch | Coming soon |
+| 07 | 14.12.2026 | 13:00 | 15:25 | L-119 | Deutsch | Coming soon |
+| 08 | 11.01.2027 | Nicht angegeben | Nicht angegeben | Nicht angegeben | Deutsch | Coming soon |
 
-Students can use this repository to:
+Die Themen und Lernziele der kommenden Einheiten werden nach den jeweiligen
+Lehrveranstaltungen ergänzt.
 
-- access lecture examples
-- deepen knowledge of discussed technologies
-- track course progress
-- retrieve the most recent code from the lectures
+## Einheit 01 – 28.09.2026
 
----
+**Package:** `einheit_01`
+**Status:** Abgehalten
 
-## Repository Structure
+| Thema | Kurze Erklärung | Nach der Einheit soll verstanden sein |
+|:------|:----------------|:-------------------------------------|
+| Organisation und Ablauf der Lehrveranstaltung | Die Organisation und der Ablauf der LV wurden besprochen. | Die Studierenden kennen den grundsätzlichen Ablauf und die Organisation der Lehrveranstaltung. |
+| KI-Coding | Der Einsatz von KI beim Programmieren und ihre Rolle im Lernprozess wurden thematisiert. | Die Studierenden wissen, dass KI unterstützen kann, ihre Vorschläge aber überprüft und verstanden werden müssen. |
+| UML-Klassendiagramme | Klassendiagramme wurden gemeinsam auf einem Flipchart gezeichnet. | Die Studierenden können Klassen, Attribute, Methoden und einfache Beziehungen in einem Klassendiagramm erkennen. |
+| Klassen und Objekte in Java | Das Beispiel `Student` verbindet das Klassendiagramm mit Java-Code und zeigt Attribute, Konstruktor und Methoden. | Die Studierenden verstehen, dass eine Klasse Aufbau und Verhalten von Objekten beschreibt und wie diese im Java-Code dargestellt werden. |
+| Software für Klassendiagramme | Die praktische Verwendung einer Software zum Erstellen von Klassendiagrammen wurde noch nicht behandelt. Die Diagramme wurden auf dem Flipchart gezeichnet. | Die Studierenden lernen in einer folgenden Einheit eine Software zur Erstellung von Klassendiagrammen kennen. |
 
-The project follows a **standard Maven-based Java structure**.
+### Beispiele in `einheit_01`
 
-```text
-src
- └─ main
-     ├─ java
-     │   ├─ unit01             # Basics: Setup, Hello World
-     │   ├─ unit02             # Lombok & Data Modeling, Basic File I/O
-     │   │   ├─ lombok         # Annotations (@Data, @Builder)
-     │   │   └─ read           # Basic Scanner usage for files
-     │   ├─ unit03             # Advanced File I/O & ETL
-     │   │   ├─ read           # BufferedReader & Streams
-     │   │   ├─ write          # BufferedWriter & File writing
-     │   │   └─ task2          # Hotel ETL assignment (CSV parsing)
-     │   ├─ unit04             # Data Structures, Sorting & GUI Intro
-     │   │   ├─ auth_logic     # Authentication logic (UserStore)
-     │   │   ├─ collections    # List, Set, Map usage
-     │   │   ├─ gui_basics     # Introduction to Swing (Login, Windows)
-     │   │   └─ sorting        # Comparable interface & Sorting
-     │   ├─ unit05             # Advanced GUI & Tables
-     │   │   ├─ gui_advanced   # Extended GUI (Admin area, Hashing)
-     │   │   └─ gui_table      # JTable implementation & Layouts
-     │   ├─ unit06             # JTable Events & Data Transfer
-     │   │   ├─ MainTable.java      # Application Entry Point
-     │   │   ├─ BasicTableDemo.java # JTable and MouseListener
-     │   │   └─ EditHotel.java      # JDialog for Data Display
-     └─ resources              # Data files (hotels.txt, names.txt)
-pom.xml                        # Maven Configuration (Lombok, etc.)
-```
+#### Beispiel: Student und Semesterwechsel
 
-Each unit (Unit 01, 02, etc.) contains the examples and experiments from the respective lecture session.
+**Aufgabenstellung:** Ein Student soll mit Vorname, Nachname, Geschlecht,
+aktuellem Semester und Matrikelnummer modelliert werden. Das Programm soll
+Studierenden anlegen und den Semesterwechsel darstellen. Nach dem sechsten
+Semester darf kein weiteres Semester begonnen werden.
 
----
+**Umsetzung:** `Student.java` speichert die Daten als Attribute, setzt sie im
+Konstruktor und stellt sie mit `toString()` dar. Die Methode
+`advanceSemester()` erhöht das Semester bis maximal sechs und meldet mit ihrem
+Rückgabewert, ob der Wechsel möglich war. `Main.java` erzeugt ein Beispielobjekt,
+gibt es aus und ruft den Semesterwechsel wiederholt auf.
 
-## Current Content & Examples
+**Ablauf:**
 
-The current examples cover the setup and core concepts of software development:
+1. Anforderungen und Daten des Studenten festlegen.
+2. Klasse, Attribute und Methoden als UML-Klassendiagramm skizzieren.
+3. Klasse `Student` mit Konstruktor und Semesterlogik implementieren.
+4. In `Main` ein Objekt erzeugen und ausgeben.
+5. Semesterwechsel einschließlich der Grenze beim sechsten Semester ausprobieren.
 
-- **Unit 01: First Steps**
-    - Java Project Setup & HelloWorld
-- **Unit 02: Lombok & Simple I/O**
-    - Introduction to Lombok (`@Data`, `@Builder`, `@AllArgsConstructor`)
-    - Reading text files using `Scanner`
-- **Unit 03: File Processing & ETL**
-    - Advanced reading with `BufferedReader` and `InputStreamReader`
-    - Writing data to files
-    - Practical ETL task: Parsing CSV-like hotel data into objects
-- **Unit 04: Logic, Data Structures & Sorting**
-    - Working with `ArrayList`, `HashSet`, and `HashMap`
-    - Sorting objects using `Comparable`
-    - Implementation of authentication logic
-    - Introduction to Java Swing (Windows, Buttons, Layouts)
-- **Unit 05: User Interfaces & Tables**
-    - Advanced Swing components: `JTable` and `DefaultTableModel`
-    - Layout management (BorderLayout, GridLayout)
-    - Role-based window control (Admin, Senior, Junior)
-    - Password hashing
-- **Unit 06: GUI Interaction & Data Transfer**
-    - Handling mouse events on `JTable` (Double-click)
-    - Passing data between windows (`JFrame` to `JDialog`)
-    - Modal dialogs and structured layouts in Swing
+## Weitere Einheiten
 
----
+Die Inhalte werden nach jeder Lehrveranstaltung ergänzt und dem passenden
+Package zugeordnet:
 
-## Technologies
-
-The following technologies and tools are currently used in the course:
-
-- **Java 25** (OpenJDK)
-- **Maven** (Build management & dependencies)
-- **IntelliJ IDEA** (Development Environment)
-- **Lombok** (Code simplification)
-- **Git** (Version control)
-
----
-
-## Knowledge Progress & Learning Objectives
-
-Competencies acquired after each unit:
-
-| Unit | Focus               | Competencies                                                                                        |
-|:-----|:--------------------|:---------------------------------------------------------------------------------------------------|
-| **01** | Basics            | Create projects, understand basic Java structure, run Hello World.                                 |
-| **02** | Data Modeling     | Use Lombok to simplify POJOs, perform simple file reading.                                         |
-| **03** | File I/O & ETL    | Efficiently read/write files, parse structured data (CSV) into object models.                      |
-| **04** | Data & Logic      | Choose appropriate collections, implement sorting, build basic GUI windows.                        |
-| **05** | Advanced GUI      | Create complex interactive UIs with tables, structured layouts, and role-based logic.              |
-| **06** | GUI Interaction   | Handle table events and implement data transfer between different GUI components.                   |
-
----
-
-## Units & Examples
-
-Detailed overview of the covered examples and concepts.
-
-### Unit 01: Basics
-- **HelloWorld**: Basic structure of a Java class and the `main` method.
-
-### Unit 02: Lombok & Simple I/O
-- **Lombok (Lecturer/Student)**: Reducing boilerplate code using annotations.
-- **ScannerFileReadMain (read)**: Using `Scanner` to read from local files.
-
-### Unit 03: Advanced File I/O
-- **BufferedDemo**: Efficient reading using `BufferedReader`.
-- **HotelEtlMain (task2)**: Modeling and parsing complex datasets from `hotels.txt`.
-- **SimpleWritingProcess**: Basic file output operations.
-
-### Unit 04: Collections, Sorting & GUI Basics
-- **Collections (HashMapDemo/SetDemo/ArrayListDemo)**: Practical examples of different Java collection types.
-- **StudentSortingMain (sorting)**: Implementing the `Comparable` interface for custom object sorting.
-- **LoginWindow (gui_basics)**: Creating the first graphical user interface with Swing.
-- **UserStore (auth_logic)**: Developing backend logic for user authentication.
-
-### Unit 05: Advanced GUI & Tables
-- **Login (gui_advanced)**: Advanced login window with hashing support.
-- **AdminWindow / SeniorWindow / JuniorWindow (gui_advanced)**: Role-specific views after login.
-- **TableDemoWindow (gui_table)**: Implementation of dynamic tables using `JTable`.
-- **TableApplicationMain (gui_table)**: Starting and managing GUI applications with table components.
-
-### Unit 06: GUI Interaction & Data Transfer
-- **MainTable**: Application entry point demonstrating the event dispatch thread.
-- **BasicTableDemo**: Advanced `JTable` usage with custom `MouseListener` for row selection.
-- **EditHotel**: Modal `JDialog` that displays data passed from the main table.
-
----
-
-## Purpose
-
-This repository serves as a **living documentation of the course** and will be gradually updated with further examples, experiments, and project components developed throughout the semester.
+- `einheit_02` – 05.10.2026: Coming soon
+- `einheit_03` – 19.10.2026: Coming soon
+- `einheit_04` – 02.11.2026: Coming soon
+- `einheit_05` – 16.11.2026: Coming soon
+- `einheit_06` – 30.11.2026: Coming soon
+- `einheit_07` – 14.12.2026: Coming soon
+- `einheit_08` – 11.01.2027: Coming soon
