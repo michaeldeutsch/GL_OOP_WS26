@@ -12,7 +12,7 @@ ist Work in Progress; diese Aktualisierung erfolgt derzeit nicht automatisch.
 | Datum | Status | Wichtig |
 |:------|:-------|:--------|
 | 28.09.2026 | Abgeschlossen | Einführung |
-| 05.10.2026 | Offen | |
+| 05.10.2026 | Abgeschlossen | |
 | 19.10.2026 | Offen | |
 | 02.11.2026 | Offen | **Zwischentest 1** |
 | 16.11.2026 | Offen | |
@@ -53,3 +53,23 @@ ausführen und die Grenze beim sechsten Semester prüfen.
 
 Die Themen dieser Einführung sind ein Ausgangspunkt und werden im weiteren
 Semester wiederholt und in neuen Aufgaben angewendet.
+
+### Einheit 02 – 05.10.2026
+
+**Package:** `einheit_02` · **Status:** Abgeschlossen
+
+| Thema | Behandelt | Stand und nächste Schritte |
+|:------|:----------|:---------------------------|
+| Wiederholung OOP & Kapselung | Festigung von Klassen, Attributen, Konstruktoren und Methodenlogik am Beispiel `Fahrgeschaeft`. | Abgeschlossen; Kapselung und Validierungslogik in Methoden werden weiterhin standardmäßig angewendet. |
+| Aufzählungstypen (`enum`) | Einführung von Enums zur typsicheren Modellierung fester Wertebereiche (`Geschlecht`, `Kategorie`). | Grundlagen vermittelt; Enums werden zur Zustands- und Kategoriesteuerung in Klassen integriert. |
+| Objektinteraktion & Matching | Methoden mit Objektparametern und Attributvergleichen am Beispiel `Mann`, `Frau` und `date()`. | Praktisch erprobt; Interaktion zwischen mehreren Objekten wird in komplexeren Domänenmodellen vertieft. |
+| Dynamische Listen (`ArrayList`) | Verwendung von `java.util.ArrayList`, Generics (`<String>`, `<Integer>`, `<Mann>`) sowie Methoden wie `add()`, `remove()`, `contains()` und `size()`. | Grundlegende Listenoperationen behandelt; dynamische Datenstrukturen ersetzen künftig statische Arrays bei variabler Elementanzahl. |
+| Dateizugriff & CSV-Parsing | Einlesen einer CSV-Datei (`namen.csv`) mittels `BufferedReader` und `FileReader`, Zeilen-Splitting und Zufallsauswahl. | Erste Dateiverarbeitung demonstriert; robuste Ein-/Ausgabe und Fehlerbehandlung (`try-catch`) werden schrittweise erweitert. |
+
+**Beispiele der Einheit:**
+- **`Fahrgeschaeft`:** Modelliert Fahrgeschäfte mit Name, Preis, Öffnungsstatus und Kapazität. Die Methode `erhoehen()` validiert Preisänderungen (nur Erhöhungen zulässig).
+- **`Tinder` / Matching:** Veranschaulicht Enums (`Geschlecht`, `Kategorie`) und Objektinteraktionen: Ein `Mann` kann eine `Frau` daten, wobei das Date nur bei übereinstimmender Kategorie erfolgreich ist.
+- **`List` (`ArrayList`):** Demonstriert das dynamische Hinzufügen, Entfernen, Durchsuchen und Iterieren von Datensätzen für Standardtypen und eigene Objekte.
+- **`Auswahl` (CSV):** Liest Namen aus einer CSV-Datei in eine `ArrayList` ein und wählt per Zufallsgenerator (`Random`) eine Person aus.
+
+**Minimale Abfolge:** Domänenmodell und Enums definieren → Klassen mit typsicheren Attributen und Konstruktoren implementieren → Interaktionslogik zwischen Objekten gestalten → Objekte in dynamischen `ArrayList`-Sammlungen verwalten, filtern und auswerten.
