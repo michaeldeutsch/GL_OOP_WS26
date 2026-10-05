@@ -1,21 +1,21 @@
-package einheit_01.uebung1;
+package einheit_01.uebung;
 
-public class Uebung08 {
+public class Uebung07 {
     public static void main(String[] args) {
-        Student student = new Student("Mina", 3);
+        Student student = new Student(5);
 
-        while (student.advanceSemester()) {
+        if (student.advanceSemester()) {
             System.out.printf("Willkommen im Semester %d.%n", student.getSemester());
         }
-        System.out.println(student.getVorname() + " hat den Studienabschluss erreicht.");
+        if (!student.advanceSemester()) {
+            System.out.println("Die maximale Semesterzahl ist erreicht.");
+        }
     }
 
     private static class Student {
-        private final String vorname;
         private int semester;
 
-        private Student(String vorname, int semester) {
-            this.vorname = vorname;
+        private Student(int semester) {
             this.semester = semester;
         }
 
@@ -29,10 +29,6 @@ public class Uebung08 {
 
         private int getSemester() {
             return semester;
-        }
-
-        private String getVorname() {
-            return vorname;
         }
     }
 }

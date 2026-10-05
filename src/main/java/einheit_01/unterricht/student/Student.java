@@ -1,4 +1,4 @@
-package einheit_01;
+package einheit_01.unterricht.student;
 
 public class Student {
 

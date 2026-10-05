@@ -1,4 +1,4 @@
-package einheit_01.uebung1;
+package einheit_01.uebung;
 
 public class Uebung03 {
     public static void main(String[] args) {
