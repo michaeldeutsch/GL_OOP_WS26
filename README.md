@@ -13,7 +13,7 @@ ist Work in Progress; diese Aktualisierung erfolgt derzeit nicht automatisch.
 |:------|:-------|:--------|
 | 28.09.2026 | Abgeschlossen | Einführung |
 | 05.10.2026 | Abgeschlossen | |
-| 19.10.2026 | Offen | |
+| 19.10.2026 | Abgeschlossen | |
 | 02.11.2026 | Offen | **Zwischentest 1** |
 | 16.11.2026 | Offen | |
 | 30.11.2026 | Offen | |
@@ -73,3 +73,23 @@ Semester wiederholt und in neuen Aufgaben angewendet.
 - **`Auswahl` (CSV):** Liest Namen aus einer CSV-Datei in eine `ArrayList` ein und wählt per Zufallsgenerator (`Random`) eine Person aus.
 
 **Minimale Abfolge:** Domänenmodell und Enums definieren → Klassen mit typsicheren Attributen und Konstruktoren implementieren → Interaktionslogik zwischen Objekten gestalten → Objekte in dynamischen `ArrayList`-Sammlungen verwalten, filtern und auswerten.
+
+### Einheit 03 – 19.10.2026
+
+**Package:** `einheit_03` · **Status:** Abgeschlossen
+
+| Thema | Behandelt | Stand und nächste Schritte |
+|:------|:----------|:---------------------------|
+| Statische Variablen & Counter (`static`) | Klassenvariablen vs. Instanzvariablen zur zentralen Verwaltung und automatischen Nummern-/ID-Vergabe am Beispiel `Auto`. | Abgeschlossen; `static` wird gezielt für klassenweite Zähler, Konstanten und Hilfsmethoden eingesetzt. |
+| 1:n Assoziationen & Objektbeziehungen | Modellierung von Beziehungen zwischen Klassen (Aggregation von Objekten in dynamischen Listen) am Beispiel `Mannschaft` und `Spieler`. | Grundlegend behandelt; Assoziationen und Kardinalitäten werden in komplexeren Systemen weiter ausgebaut. |
+| Bidirektionale Verknüpfung & Konsistenz | Wechselseitige Referenzierung zwischen Entitäten (`Studiengang` <-> `Student`) und konsistente Verwaltung von Rückverweisen. | Praktisch erprobt; Konsistenzhaltung und zyklusfreie Ausgabe (`toString`) bilden die Basis für relationale Datenmodelle. |
+| Enums in Fachdomänen | Einsatz von Aufzählungstypen zur Rollen- und Typisierung (`Position` im Sport, `Type` für Studiengangsarten). | Fest verankert; Enums strukturieren Zustand und Klassifizierung innerhalb von Objektbeziehungen. |
+| UML-Klassendiagramme (UMLet) | Werkzeuggestützte Modellierung von Klassendiagrammen (`.uxf` / `.jpg`) für Klassenstrukturen und Assoziationen. | Erste digitale Modellierung erfolgt; UMLet wird zur visuellen Dokumentation und Vorab-Planung von Softwareentwürfen weiter genutzt. |
+
+**Beispiele der Einheit:**
+- **`Auto` (`counter`):** Veranschaulicht den Unterschied zwischen statischen Klassenvariablen (`counter`) und instanzspezifischen Attributen (`kfzNr`) zur automatischen Generierung fortlaufender Kennungen.
+- **`Mannschaft` & `Spieler` (`fußball`):** Zeigt eine 1:n Assoziation mit dem Enum `Position`. Spieler werden über `anschreiben()` aufgenommen, dem Team zugewiesen und strukturiert ausgegeben.
+- **`Studiengang` & `Student` (`studiengang`):** Demonstriert eine bidirektionale Beziehung inklusive Studiengangstyp (`Type` wie Bachelor/Master) sowie das gegenseitige Verknüpfen von Referenzen.
+- **`UMLet-Modellierung`:** Enthält das visuelle Klassendiagramm (`Klassendiagramm_Student_Studiengang`) zur formalen Darstellung der Struktur und Beziehungen.
+
+**Minimale Abfolge:** Klassenstruktur und Beziehungen per UMLet modellieren → Klassen mit Attributen, statischen Zählern und Enums implementieren → 1:n Assoziationen über `ArrayList` aufbauen → Referenzen (ggf. bidirektional) setzen und Konsistenz sowie Ausgabe sicherstellen.
