@@ -13,22 +13,6 @@ public class Auto {
         this.name = name;
     }
 
-    public static int getCounter() {
-        return counter;
-    }
-
-    public int getKfzNr() {
-        return kfzNr;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @Override
     public String toString() {
         return "Auto{" +

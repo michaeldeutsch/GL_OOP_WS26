@@ -13,34 +13,6 @@ public class Student {
         this.nachname = nachname;
     }
 
-    public int getMatrikelNr() {
-        return matrikelNr;
-    }
-
-    public String getVorname() {
-        return vorname;
-    }
-
-    public void setVorname(String vorname) {
-        this.vorname = vorname;
-    }
-
-    public String getNachname() {
-        return nachname;
-    }
-
-    public void setNachname(String nachname) {
-        this.nachname = nachname;
-    }
-
-    public Studiengang getStudiengang() {
-        return studiengang;
-    }
-
-    public void setStudiengang(Studiengang studiengang) {
-        this.studiengang = studiengang;
-    }
-
     public void addStudiengang(Studiengang studiengang) {
         this.studiengang = studiengang;
     }
@@ -51,7 +23,7 @@ public class Student {
                 "matrikelNr=" + matrikelNr +
                 ", vorname='" + vorname + '\'' +
                 ", nachname='" + nachname + '\'' +
-                ", studiengang=" + (studiengang != null ? studiengang.getName() : "keiner") +
+                ", studiengang=" + studiengang +
                 '}';
     }
 }
