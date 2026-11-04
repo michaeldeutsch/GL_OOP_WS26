@@ -14,7 +14,7 @@ ist Work in Progress; diese Aktualisierung erfolgt derzeit nicht automatisch.
 | 28.09.2026 | Abgeschlossen | Einführung |
 | 05.10.2026 | Abgeschlossen | |
 | 19.10.2026 | Abgeschlossen | |
-| 02.11.2026 | Offen | **Zwischentest 1** |
+| 02.11.2026 | Abgeschlossen | **Zwischentest 1** |
 | 16.11.2026 | Offen | |
 | 30.11.2026 | Offen | |
 | 14.12.2026 | Offen | **Zwischentest 2** |
@@ -93,3 +93,22 @@ Semester wiederholt und in neuen Aufgaben angewendet.
 - **`UMLet-Modellierung`:** Enthält das visuelle Klassendiagramm (`Klassendiagramm_Student_Studiengang`) zur formalen Darstellung der Struktur und Beziehungen.
 
 **Minimale Abfolge:** Klassenstruktur und Beziehungen per UMLet modellieren → Klassen mit Attributen, statischen Zählern und Enums implementieren → 1:n Assoziationen über `ArrayList` aufbauen → Referenzen (ggf. bidirektional) setzen und Konsistenz sowie Ausgabe sicherstellen.
+
+### Einheit 04 – 02.11.2026
+
+**Package:** `einheit_04` · **Status:** Abgeschlossen
+
+| Thema | Behandelt | Stand und nächste Schritte |
+|:------|:----------|:---------------------------|
+| Eindeutigkeitsprüfung & Duplikate (`static`) | Sicherstellung eindeutiger Werte (z. B. Namen) über eine zentrale statische Sammlung (`ArrayList`) und Fallback-Handling am Beispiel `Mitarbeiter`. | Abgeschlossen; globale Duplikatsprüfungen und Validierungen werden bei Entitäten mit eindeutigen Identifikatoren eingesetzt. |
+| Vererbungsgrundlagen (`extends`) | Ableiten von Subklassen aus Basisklassen zur Wiederverwendung und Spezialisierung von Attributen und Methoden am Beispiel `Lebewesen`, `Mensch` und `Tier`. | Grundlagen vermittelt; Vererbungshierarchien werden in den kommenden Einheiten vertieft und um Polymorphismus erweitert. |
+| Konstruktorkaskade (`super`) | Weiterleitung von Konstruktorparametern an die Superklasse mittels `super(...)` zur sauberen Initialisierung geerbter Attribute. | Behandelt und gefestigt; Aufruf der Superkonstruktoren bildet den Standard bei abgeleiteten Klassen. |
+| Methodenüberschreibung (`@Override`) | Anpassen und Erweitern geerbter Methodenlogik (`toString()`) und Zugriff auf Superklassen-Methoden (`super.getName()`, `super.getAlter()`). | Praktisch erprobt; Überschreiben von Methoden wird zur individuellen Verhaltensteuerung in Subklassen weiter angewendet. |
+| Zwischentest 1 | Durchführung des ersten Zwischentests (ZT1) zur Überprüfung des bisherigen OOP-Wissensstands. | Abgeschlossen; Aufgabenstellung und Musterlösung sind im Repository hinterlegt. |
+
+**Beispiele der Einheit:**
+- **`Mitarbeiter` (`unqiue`):** Veranschaulicht die Kombination eines statischen ID-Zählers (`COUNTER`) mit einer statischen Namensliste (`ALL_NAMES`). Bei Namensdopplung wird auf einen Standardwert (`DEFAULT_NAME = "dummy"`) ausgewichen und eine Warnung ausgegeben.
+- **`Lebewesen`, `Tier` & `Mensch` (`vererbung`):** Demonstriert Vererbung in Java: Die Basisklasse `Lebewesen` stellt `name` und `alter` bereit. `Tier` erweitert um `futter` und überschreibt `toString()` unter Zugriff auf `super.getName()`, während `Mensch` um `adresse` ergänzt.
+- **`Zwischentest 1` (`zt.zt1` / `uebung/z1`):** In dieser Einheit fand der erste Zwischentest statt. Die Aufgabenstellung (`GL_OOP_Suessigkeitenstation_ZT1_FINAL.docx`) befindet sich unter `uebung/z1/` bzw. `src/main/java/zt/zt1/`. Die vollständige Musterlösung inklusive der Klasse `SuessigkeitenStation`, Testprogramm `Main` und UML-Klassendiagrammen (`SuessigkeitenStation.uxf` / `.pdf`) ist unter `src/main/java/zt/zt1/` abgelegt.
+
+**Minimale Abfolge:** Eindeutigkeitsregeln mit statischen Listen und Zählern umsetzen → Basisklasse mit gemeinsamen Attributen, Gettern und Konstruktor definieren → Subklassen mit `extends` ableiten und geerbte Attribute via `super(...)` initialisieren → Subklassen-spezifische Attribute und Methoden ergänzen sowie Methoden bei Bedarf mit `@Override` überschreiben.

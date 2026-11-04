@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>80</x>
+      <y>50</y>
+      <w>500</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>SuessigkeitenStation
+--
+-bezeichnung: String {readOnly}
+-bestand: int
+-geoeffnet: boolean
+--
++SuessigkeitenStation(bezeichnung: String, anfangsbestand: int, geoeffnet: boolean)
++getBezeichnung(): String
++getBestand(): int
++isGeoeffnet(): boolean
++setBestand(bestand: int): void
++setGeoeffnet(geoeffnet: boolean): void
++verteile(anzahl: int): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
