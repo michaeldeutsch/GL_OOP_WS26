@@ -15,7 +15,7 @@ ist Work in Progress; diese Aktualisierung erfolgt derzeit nicht automatisch.
 | 05.10.2026 | Abgeschlossen | |
 | 19.10.2026 | Abgeschlossen | |
 | 02.11.2026 | Abgeschlossen | **Zwischentest 1** |
-| 16.11.2026 | Offen | |
+| 16.11.2026 | Abgeschlossen | |
 | 30.11.2026 | Offen | |
 | 14.12.2026 | Offen | **Zwischentest 2** |
 | 11.01.2027 | Offen | |
@@ -112,3 +112,22 @@ Semester wiederholt und in neuen Aufgaben angewendet.
 - **`Zwischentest 1` (`zt.zt1` / `uebung/z1`):** In dieser Einheit fand der erste Zwischentest statt. Die Aufgabenstellung (`GL_OOP_Suessigkeitenstation_ZT1_FINAL.docx`) befindet sich unter `uebung/z1/` bzw. `src/main/java/zt/zt1/`. Die vollständige Musterlösung inklusive der Klasse `SuessigkeitenStation`, Testprogramm `Main` und UML-Klassendiagrammen (`SuessigkeitenStation.uxf` / `.pdf`) ist unter `src/main/java/zt/zt1/` abgelegt.
 
 **Minimale Abfolge:** Eindeutigkeitsregeln mit statischen Listen und Zählern umsetzen → Basisklasse mit gemeinsamen Attributen, Gettern und Konstruktor definieren → Subklassen mit `extends` ableiten und geerbte Attribute via `super(...)` initialisieren → Subklassen-spezifische Attribute und Methoden ergänzen sowie Methoden bei Bedarf mit `@Override` überschreiben.
+
+### Einheit 05 – 16.11.2026
+
+**Package:** `einheit_05` · **Status:** Abgeschlossen
+
+| Thema | Behandelt | Stand und nächste Schritte |
+|:------|:----------|:---------------------------|
+| Abstrakte Klassen & Methoden (`abstract`) | Definition unvollständiger Basisklassen (`Person`) zur Vorgabe einheitlicher Methodensignaturen (`abstract void getInfo()`), die von Subklassen zwingend implementiert werden müssen. | Abgeschlossen; abstrakte Klassen bilden das Fundament für flexible, polymorphe Softwarearchitekturen. |
+| Methodenüberladung & Polymorphismus | Überladung von Methoden mit unterschiedlichen Parameterlisten (`gibStatus(...)`) sowie polymorpher Aufruf spezialisierter Methoden über Basisklassenreferenzen. | Fest verankert; saubere Methodensignaturen und dynamische Methodenbindung erhöhen Wiederverwendbarkeit und Lesbarkeit. |
+| Finale Modifikatoren (`final`) | Einsatz von `final` zur Vererbungskontrolle bei Klassen (`final class Bachelor`) und zum Überschreibschutz kritischer Methoden (`final void tueIrgendwas()`). | Behandelt; `final` wird gezielt zur Gewährleistung von Unveränderlichkeit und Entwurfssicherheit genutzt. |
+| Datums- & Zeitverarbeitung (`LocalDate`, `Period`) | Modellierung von Kalenderdaten mit der modernen Java Date and Time API (`java.time.LocalDate`) und exakte Zeitspannenberechnungen (`Period.between`). | Praktisch erprobt; Alters- und Fristberechnungen werden standardmäßig über `LocalDate` und `Period` abgebildet. |
+| Boilerplate-Reduktion mit Lombok | Einsatz von Project Lombok (`@Data`, `@AllArgsConstructor`, `@NoArgsConstructor`, `@Getter`, `@Setter`, `@ToString`) zur automatisierten Code-Generierung. | Grundlagen vermittelt; Lombok steigert die Produktivität und minimiert fehleranfälligen Standardcode in Datenklassen. |
+
+**Beispiele der Einheit:**
+- **`Person`, `Mitarbeiter`, `Student` & `Bachelor` (`person` / `fh`):** Demonstriert eine Vererbungshierarchie mit der abstrakten Klasse `Person`, der abstrakten Methode `getInfo()`, überladenen Methoden `gibStatus()`, der finalen Methode `tueIrgendwas()` sowie der finalen Subklasse `Bachelor`.
+- **`Person` & `Tier` (`lombok`):** Veranschaulicht die drastische Reduktion von Boilerplate-Code durch Lombok-Annotationen (`@Data`, `@AllArgsConstructor`, `@NoArgsConstructor`), wodurch Getter, Setter, Konstruktoren und `toString()` automatisch zur Verfügung stehen.
+- **`LocalDate` & `Period`:** Zeigt die praxisnahe Berechnung von Alters- und Zeitraumintervallen anhand konkreter Kalenderdaten.
+
+**Minimale Abfolge:** Abstrakte Basisklasse mit gemeinsamen Feldern, abstrakten Methoden und finalen Schablonen entwerfen → Subklassen mit `extends` ableiten und abstrakte Methoden implementieren → Finale Klassen für abgeschlossene Typen definieren → Datums- und Fristlogik via `LocalDate` und `Period` integrieren → Lombok zur effizienten und wartungsfreundlichen Implementierung einsetzen.
